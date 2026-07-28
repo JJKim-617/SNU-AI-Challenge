@@ -95,7 +95,9 @@ Inputs the organizers provide:
 - `--test-csv`  : CSV with columns `Id, Input_1, Input_2, Input_3, Input_4, Sentence`
 - `--image-root`: directory holding `<Id>/<frame>.jpg`
 
-`run_inference.sh` runs three stages and is **resumable** — if `work/scores.json` already exists it is
+`run_inference.sh` loads the Qwen base in 4-bit and **attaches our LoRA adapter automatically** — there
+is no manual merge and no adapter-path to set; it reads `weights/base_model` and `weights/adapter`
+directly. It runs three stages and is **resumable** — if `work/scores.json` already exists it is
 reused, so a crash in a later stage costs seconds, not hours. Every emitted row is validated to be a
 permutation of `[1,2,3,4]`. Honored env vars: `PYTHON=<python>` and `CUDA_VISIBLE_DEVICES=<gpu>`.
 
