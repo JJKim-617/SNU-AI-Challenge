@@ -1,0 +1,18 @@
+# Exact versions of the environment the 0.91972 result was produced and verified on.
+# transformers 5.x is REQUIRED: the backbone is a Qwen3.6-VL (arch id `qwen3_5`) hybrid
+# Gated-DeltaNet model that older transformers releases cannot instantiate.
+# torch is pinned to the cu128 build; install it from the PyTorch index, not PyPI:
+#   pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.12.1
+tokenizers==0.22.2
+safetensors==0.8.0
+huggingface_hub==1.22.0
+accelerate==1.14.0
+peft==0.19.1
+bitsandbytes==0.49.2
+qwen-vl-utils==0.0.14
+numpy==2.3.5
+pillow==11.3.0

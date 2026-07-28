@@ -1,0 +1,10 @@
+{
+  "tau": 4,
+  "min_votes": 1,
+  "calib_em": 0.628,
+  "calib_base": 0.592,
+  "delta_pp": 3.600000000000003,
+  "gains": 19,
+  "losses": 1,
+  "gate_ok": true
+}

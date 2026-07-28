@@ -1,0 +1,10 @@
+# base model is downloaded, never committed (52 GB)
+weights/base_model/
+# runtime outputs
+work/
+submission.csv
+*.log
+# python
+__pycache__/
+*.pyc
+.venv/
